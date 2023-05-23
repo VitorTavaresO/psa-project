@@ -62,7 +62,7 @@ void loop()
     {
         if (i < numeroLedsAcender)
         {
-            pixelsPotenciometro.setPixelColor(i, pixelsPotenciometro.Color(0, 255, 0)); // Cor verde
+            pixelsPotenciometro.setPixelColor(i, pixelsPotenciometro.Color(255, 0, 0)); // Cor vermelha
         }
         else
         {
