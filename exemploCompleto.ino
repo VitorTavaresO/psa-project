@@ -16,6 +16,7 @@ Adafruit_NeoPixel pixelsPotenciometro(NUMPIXELS_POTENCIOMETRO, NEOPIXEL_POTENCIO
 void setup()
 {
     pinMode(BOTAO_PIN, INPUT);
+    pinMode(POTENCIOMETRO_PIN, INPUT);
     pinMode(MOTOR_PWM_PIN, OUTPUT);
     pinMode(MOTOR_DIR_PIN, OUTPUT);
     pixelsBotao.begin();
@@ -29,11 +30,15 @@ void loop()
     int velocidadeMotor = map(potenciometroValor, 0, 1023, 0, 255);
     int numeroLedsAcender = map(velocidadeMotor, 0, 255, 0, NUMPIXELS_POTENCIOMETRO);
 
+    /////////////////////////////////////////////////////////
+    // ESTRUTURA DO BOTÃO
+    ////////////////////////////////////////////////////////
+
     if (estadoBotao == HIGH)
     {
         digitalWrite(MOTOR_DIR_PIN, HIGH);
-        analogWrite(MOTOR_PWM_PIN, 255); // Velocidade máxima
-        pixelsBotao.setBrightness(255);  // Brilho máximo
+        // analogWrite(MOTOR_PWM_PIN, 255); // Controle de velocidade em PWM
+        pixelsBotao.setBrightness(255); // Brilho máximo
         for (int i = 0; i < NUMPIXELS_BOTAO; i++)
         {
             pixelsBotao.setPixelColor(i, pixelsBotao.Color(0, 255, 0)); // Cor verde
@@ -45,6 +50,10 @@ void loop()
         pixelsBotao.clear();
         pixelsBotao.show();
     }
+
+    /////////////////////////////////////////////////////////
+    // ESTRUTURA DO POTENCIÔMETRO
+    ////////////////////////////////////////////////////////
 
     digitalWrite(MOTOR_DIR_PIN, LOW);
     analogWrite(MOTOR_PWM_PIN, velocidadeMotor); // Velocidade baseada no potenciômetro
