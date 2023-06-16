@@ -23,10 +23,6 @@ void loop()
     int velocidadeMotor = map(potenciometroValor, 0, 1023, 0, 255);
     int numeroLedsAcender = map(velocidadeMotor, 0, 255, 0, NUMPIXELS);
 
-    /////////////////////////////////////////////////////////
-    // ESTRUTURA DO BOTÃO
-    ////////////////////////////////////////////////////////
-
     if (estadoBotao == HIGH)
     {
         analogWrite(MOTOR_PWM_PIN, 255); // Controle de velocidade em PWM
@@ -54,8 +50,4 @@ void loop()
         }
         pixels.show();
     }
-
-    /////////////////////////////////////////////////////////
-    // ESTRUTURA DO POTENCIÔMETRO
-    ////////////////////////////////////////////////////////
 }

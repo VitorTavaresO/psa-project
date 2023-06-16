@@ -2,7 +2,7 @@
 
 #define NEOPIXEL_BOTAO_PIN 6
 #define NUMPIXELS_BOTAO 4
-#define MOTOR_DIR_PIN 8
+#define MOTOR_BOTAO_PIN 8
 #define BOTAO_PIN 2
 Adafruit_NeoPixel pixelsBotao(NUMPIXELS_BOTAO, NEOPIXEL_BOTAO_PIN, NEO_GRB + NEO_KHZ800);
 
@@ -18,7 +18,7 @@ void setup()
     pinMode(BOTAO_PIN, INPUT);
     pinMode(POTENCIOMETRO_PIN, INPUT);
     pinMode(MOTOR_PWM_PIN, OUTPUT);
-    pinMode(MOTOR_DIR_PIN, OUTPUT);
+    pinMode(MOTOR_BOTAO_PIN, OUTPUT);
     pixelsBotao.begin();
     pixelsPotenciometro.begin();
 }
@@ -36,7 +36,7 @@ void loop()
 
     if (estadoBotao == HIGH)
     {
-        digitalWrite(MOTOR_DIR_PIN, HIGH);
+        digitalWrite(MOTOR_BOTAO_PIN, HIGH);
         // analogWrite(MOTOR_PWM_PIN, 255); // Controle de velocidade em PWM
         pixelsBotao.setBrightness(255); // Brilho máximo
         for (int i = 0; i < NUMPIXELS_BOTAO; i++)
@@ -51,11 +51,12 @@ void loop()
         pixelsBotao.show();
     }
 
+    digitalWrite(MOTOR_BOTAO_PIN, LOW);
+
     /////////////////////////////////////////////////////////
     // ESTRUTURA DO POTENCIÔMETRO
     ////////////////////////////////////////////////////////
 
-    digitalWrite(MOTOR_DIR_PIN, LOW);
     analogWrite(MOTOR_PWM_PIN, velocidadeMotor); // Velocidade baseada no potenciômetro
     pixelsPotenciometro.setBrightness(255);      // Brilho máximo
     for (int i = 0; i < NUMPIXELS_POTENCIOMETRO; i++)
