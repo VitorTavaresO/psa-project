@@ -1,3 +1,2 @@
-# STM32-Study
+# Projeto Avançado de Software
 
-This repository is for a personal study about STM32 Board and Embedded Programming for Arm Cortex.
