@@ -44,16 +44,21 @@ Desenvolver um scanner de portas que verifica quais serviços estão ativos em u
 
 1. **Configuração Inicial**
    Criar um script básico em Python para aceitar um endereço IP ou domínio como entrada.
+
 2. **Implementação da Varredura de Portas**
    Usar socket para verificar quais portas estão abertas.
    Integrar a biblioteca nmap para identificar os serviços ativos.
+
 3. **Geração do Relatório**
    Criar um arquivo CSV ou JSON contendo os resultados da varredura.
    Salvar IP escaneado, portas abertas e serviços detectados.
+
 4. **Refinamento e Testes**
    Melhorar a interface do script (ex.: menus interativos).
    Adicionar um modo de escaneamento rápido e um mais detalhado.
+
 5. **Exemplo de Uso:**
+
    $ python scanner.py --target 192.168.1.1
    [+] Escaneando 192.168.1.1...
    [+] Porta 22 (SSH) - Aberta
@@ -89,10 +94,12 @@ Essa abordagem permitirá uma avaliação detalhada dos efeitos da dependência 
 
   * Definição do tema do estudo, das ferramentas a serem utilizadas e do direcionamento para o desenvolvimento da aplicação.
   * Planejamento da estrutura de monitoramento das interações e definição das métricas a serem observadas durante o desenvolvimento.
+
 * **2° Dia** :
 
   * Início do desenvolvimento prático: o participante terá o primeiro período de tempo dedicado para tentar construir a aplicação utilizando a IA.
   * Acompanhamento das interações com a IA e registros das decisões tomadas pelo participante, incluindo as dificuldades enfrentadas.
+
 * **3° Dia** :
 
   * Continuação do desenvolvimento: o participante terá o tempo restante para finalizar a solução proposta.
@@ -103,10 +110,12 @@ Essa abordagem permitirá uma avaliação detalhada dos efeitos da dependência 
 
 1. Artigos Jornalístico:
    1. Humans do it better: GitClear analyzes 153M lines of code, finds risks of AI.
+
       **LINK: <https://arc.dev/talent-blog/impact-of-ai-on-code/>**
 
 2. Artigos Científicos:
    1. The Next Frontier in Software Development: AI-Augmented Software Development Processes
+
       **LINK: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10176194>**
 
    2. Future of software development with generative AI
@@ -114,4 +123,5 @@ Essa abordagem permitirá uma avaliação detalhada dos efeitos da dependência 
       **LINK: <https://link.springer.com/article/10.1007/s10515-024-00426-z>**
 
    3. Impact of Generative AI on the Software Development Lifecycle (SDLC)
+
       **LINK: <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4536700>**
