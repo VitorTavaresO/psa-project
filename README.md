@@ -65,14 +65,17 @@ Desenvolver um scanner de portas que verifica quais serviços estão ativos em u
 A análise será conduzida com o objetivo de identificar os impactos da dependência da Inteligência Artificial no desenvolvimento de software, avaliando tanto os benefícios quanto os desafios enfrentados por um usuário sem conhecimento prévio da área de redes ao construir um scanner de IP com auxílio da IA.
 
 1. **Monitoramento das Interações**
+
    * Um dos membros da equipe será responsável por acompanhar o participante que utilizará a IA para desenvolver o sistema.
    * Durante o desenvolvimento, serão registradas todas as interações realizadas com a IA, incluindo as perguntas feitas, os códigos gerados, as edições aplicadas e as dificuldades enfrentadas.
    * Será analisado o processo de tomada de decisão do participante, observando quando e como ele aceita, modifica ou rejeita as respostas da IA.
    * As interações problemáticas serão documentadas, destacando casos onde o código gerado pela IA apresentou erros, falhas de segurança, inconsistências ou dificuldades de implementação.
 2. **Registro de Resultados e Problemas Identificados**
+
    * As principais dificuldades encontradas pelo participante serão registradas, como erros de funcionamento, falhas na interpretação do código gerado e necessidade de múltiplas interações para resolver um problema.
    * Será avaliada a capacidade do participante de compreender e corrigir os erros por conta própria ou se ele precisa recorrer novamente à IA, criando um ciclo de dependência.
 3. **Análise Externa e Conclusões**
+
    * Após o período de desenvolvimento e monitoramento, um terceiro membro da equipe, que não participou diretamente da criação do código nem do acompanhamento, realizará uma análise crítica aprofundada.
    * Esse membro avaliará os dados coletados, buscando padrões de dependência da IA, impactos na qualidade do código e desafios enfrentados pelo participante.
    * Serão extraídos insights sobre os benefícios proporcionados pela IA, como agilidade no desenvolvimento e auxílio na solução de problemas, assim como as problemáticas, como a falta de compreensão do código gerado e os riscos de segurança e manutenção.
@@ -107,6 +110,7 @@ Essa abordagem permitirá uma avaliação detalhada dos efeitos da dependência 
       **LINK: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10176194>**
 
    2. Future of software development with generative AI
+
       **LINK: <https://link.springer.com/article/10.1007/s10515-024-00426-z>**
 
    3. Impact of Generative AI on the Software Development Lifecycle (SDLC)
