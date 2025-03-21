@@ -101,10 +101,13 @@ Essa abordagem permitirá uma avaliação detalhada dos efeitos da dependência 
 1. Artigos Jornalístico:
    1. Humans do it better: GitClear analyzes 153M lines of code, finds risks of AI.
       **LINK: <https://arc.dev/talent-blog/impact-of-ai-on-code/>**
+
 2. Artigos Científicos:
    1. The Next Frontier in Software Development: AI-Augmented Software Development Processes
       **LINK: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10176194>**
+
    2. Future of software development with generative AI
       **LINK: <https://link.springer.com/article/10.1007/s10515-024-00426-z>**
+
    3. Impact of Generative AI on the Software Development Lifecycle (SDLC)
       **LINK: <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4536700>**
