@@ -1,5 +1,5 @@
 
-# Um Estudo Sobre os Riscos da Dependência Cega de IA para o Desenvolvimento de Software
+# Os Riscos da Dependência Cega de IA para o Desenvolvimento de Software
 
 ## Introdução
 
