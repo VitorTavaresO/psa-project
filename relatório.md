@@ -131,24 +131,23 @@ if _name_ == "_main_":
 - Ela aceitou a inserção do código diretamente sobre o código anterior.
 - Ela questionou ao Copilot o que seria a biblioteca Socket apresentada.
 
-    Resposta do Copilot:
+  Resposta do Copilot:
 
-    A biblioteca socket é uma biblioteca padrão do Python que fornece uma interface para comunicação de rede usando sockets. Um socket é um   ponto de comunicação entre dois dispositivos (como cliente e servidor) em uma rede. Ele permite que você envie e receba dados entre computadores  conectados por meio de protocolos como TCP ou UDP.
+  A biblioteca socket é uma biblioteca padrão do Python que fornece uma interface para comunicação de rede usando sockets. Um socket é um   ponto de comunicação entre dois dispositivos (como cliente e servidor) em uma rede. Ele permite que você envie e receba dados entre computadores  conectados por meio de protocolos como TCP ou UDP.
 
-    Principais funcionalidades da biblioteca socket:
- Criação de conexões de rede:
+  Principais funcionalidades da biblioteca socket:
+  Criação de conexões de rede:
 
-    Permite criar conexões cliente-servidor.
- Suporta protocolos como TCP (conexão confiável) e UDP (conexão sem estado).
- Escaneamento de portas:
+  Permite criar conexões cliente-servidor.
+  Suporta protocolos como TCP (conexão confiável) e UDP (conexão sem estado).
+  Escaneamento de portas:
 
-    Pode ser usado para verificar se uma porta em um endereço IP está aberta ou fechada, como no seu código.
- Envio e recebimento de dados:
+  Pode ser usado para verificar se uma porta em um endereço IP está aberta ou fechada, como no seu código.
+  Envio e recebimento de dados:
 
-    Permite enviar e receber dados entre dispositivos conectados.
- Comunicação local e remota:
- Pode ser usado para comunicação entre processos no mesmo dispositivo ou entre dispositivos diferentes em uma rede.
-
+  Permite enviar e receber dados entre dispositivos conectados.
+  Comunicação local e remota:
+  Pode ser usado para comunicação entre processos no mesmo dispositivo ou entre dispositivos diferentes em uma rede.
 - O Copilot informou a necessidade da instalação do nmap.
 - Ela executou a instalação por meio do pip.
 - Após a execução, ela rodou o programa mirando no ip 8.8.8.8, a execução retornou a porta 53 aberta e depois ficou rodando indefinidamente.
@@ -174,7 +173,6 @@ if _name_ == "_main_":
   ```
 
 - Ela selecionou o erro e questionou ao copilot o que poderia ser o problema e uma possível solução.
-
 - Após um tempo o Copilot apresentou a necessidade de instalar o nmap no Windows também e forneceu o link.
 - Após a instação do nmap o copilot instruiu a conferir se está no PATH e rodar o comando
 
@@ -183,7 +181,6 @@ if _name_ == "_main_":
   ```
 
 - O programa funcionou porém apresentou outro erro, erro esse que a aluna perguntou ao copilot o motivo.
-
 - ~~Nota: A maior dificuldade foi com os erros de funcionamento direto na máquina.~~
 - A aluna teve problemas de fazer modificação no código quando solicitado, por não entender todo o funcionamento do mesmo.
 - Ao se deparar com um erro de serviços fornecidos, ela foi obrigada novamente a perguntar para o Copilot o porque do erro.
@@ -269,20 +266,21 @@ if _name_ == "_main_":
 ### Geração do Relatório
 
 - Ela enviou o seguinte prompt para o copilot:
+
   - Caso eu queira criar um arquivo .csv ou .json contendo os resultados da varredura o que eu teria que fazer
   - Resultado:
 
-   ```python
-   import json
+  ```python
+  import json
 
-    def save_results_to_json(filename, results):
-        try:
-            with open(filename, mode='w', encoding='utf-8') as file:
-                json.dump(results, file, indent=4)
-            print(f"Resultados salvos em {filename}")
-        except Exception as e:
-            print(f"Erro ao salvar resultados no JSON: {e}")
-    ```
+   def save_results_to_json(filename, results):
+       try:
+           with open(filename, mode='w', encoding='utf-8') as file:
+               json.dump(results, file, indent=4)
+           print(f"Resultados salvos em {filename}")
+       except Exception as e:
+           print(f"Erro ao salvar resultados no JSON: {e}")
+  ```
 
   - O copilot também reestruturou o scan_services_nmap para ficar melhor adequado para salvar no json.
 
@@ -309,16 +307,17 @@ if _name_ == "_main_":
   ```
 
   - Ela marcou o código e questionou o que seria o json.dump e para que serve.
-
   - Ao tentar rodar um erro foi apresentado, "No module nmap"
   - Ela copiou o erro apresentando e jogou no Copilot questionando o que poderia ser o erro.
   - Copilot sugeriu ela instalar o python-nmap ou dar um show pelo pip para ver se já não estava instalado.
   - Ela disse que já tinha instalado o aplicativo e já tinha instalado também pelo pip, porém o erro continuava.
   - O erro foi identificado.
   - Ela enviou o seguinte prompt
+
     - O resultado das portas abertas está dando a 22 e a 90, porém os resultados dos serviços ativos não batem com as portas, eles mostraram os serviços na porta 25 e 80 como fechados.
   - O copilot forneceu uma correção que deu problemas de leituras.
   - Ela enviou outro prompt
+
     - No caso de eu querer scanear as portas com o socket para passar a lista de portas abertas para scanear os serviços com o nmap, o que eu devo fazer ?
 
     ```python
@@ -335,16 +334,16 @@ if _name_ == "_main_":
         try:
             ipaddress.ip_address(target)
             print(f"Alvo recebido: {target}")
-            
+
             # Escaneia portas abertas com socket
             open_ports = scan_ports_with_socket(target)
             print(f"Portas abertas detectadas: {open_ports}")  # Debug print
-            
+
             # Identifica serviços ativos com nmap
             if open_ports:
                 results = scan_services_with_nmap(target, open_ports)
                 print(f"Serviços identificados: {results}")  # Debug print
-                
+
                 # Salva os resultados em um arquivo JSON
                 save_results_to_json("scan_results.json", results)
             else:
@@ -400,7 +399,7 @@ if _name_ == "_main_":
 
             # Use the open ports for the Nmap scan
             nm.scan(hosts=target, arguments=f'-sV --version-intensity 5 -p {ports_to_scan}')
-            
+
             for host in nm.all_hosts():
                 print(f"Host: {host}")
                 for proto in nm[host].all_protocols():
@@ -439,16 +438,16 @@ if _name_ == "_main_":
         try:
             ipaddress.ip_address(target)
             print(f"Alvo recebido: {target}")
-            
+
             # Escaneia portas abertas com socket
             open_ports = scan_ports_with_socket(target)
             print(f"Portas abertas detectadas: {open_ports}")
-            
+
             # Identifica serviços ativos com nmap
             if open_ports:
                 results = scan_services_with_nmap(target, open_ports)
                 print(f"Serviços identificados: {results}")
-                
+
                 # Salva os resultados em um arquivo JSON
                 save_results_to_json("scan_results.json", results)
             else:
@@ -464,8 +463,8 @@ if _name_ == "_main_":
     - Deu erro na leitura dos serviços
     - Nmap scan info: {'error': ['2804:360:40:2188:19ba:9b3:e4d5:fa89 looks like an IPv6 target specification -- you have to use the -6 option.\r\nWARNING: No targets were specified, so 0 hosts scanned.\r\n'], 'warning': ['WARNING: No targets were specified, so 0 hosts scanned.\r\n'], 'tcp': {'method': 'syn', 'services': '22,90'}}
     - Ela enviou o promp:
-      - Como eu posso garantir que o ipv6 pode ser escaneado com os serviços de scan do nmap ?
 
+      - Como eu posso garantir que o ipv6 pode ser escaneado com os serviços de scan do nmap ?
     - Conseguiu chegar ao resultado esperado com a última correção de código:
 
     ```python
@@ -511,15 +510,15 @@ if _name_ == "_main_":
             arguments = f'-sV --version-intensity 9 -p {ports_to_scan}'
             if is_ipv6:
                 arguments += ' -6'  # Add the IPv6 flag if the target is IPv6
-            
+
             # Use the open ports for the Nmap scan
             print(f"Comando Nmap: {arguments}")
             nm.scan(hosts=target, arguments=arguments)
-            
+
             # Debug: Print raw Nmap scan info
             print(f"Nmap scan info: {nm.scaninfo()}")
             print(f"Nmap all hosts: {nm.all_hosts()}")
-            
+
             for host in nm.all_hosts():
                 print(f"Host: {host}")
                 for proto in nm[host].all_protocols():
@@ -558,16 +557,16 @@ if _name_ == "_main_":
         try:
             ipaddress.ip_address(target)
             print(f"Alvo recebido: {target}")
-            
+
             # Escaneia portas abertas com socket
             open_ports = scan_ports_with_socket(target)
             print(f"Portas abertas detectadas: {open_ports}")
-            
+
             # Identifica serviços ativos com nmap
             if open_ports:
                 results = scan_services_with_nmap(target, open_ports)
                 print(f"Serviços identificados: {results}")
-                
+
                 # Salva os resultados em um arquivo JSON
                 save_results_to_json("scan_results.json", results)
             else:
@@ -583,68 +582,69 @@ if _name_ == "_main_":
 ### Menu Interativo
 
 - Prompt :
-  - Caso eu queira adicionar um menu interativo com as opções "Escaneamento rápido" que escaneie rapidamente e "Escaneamento detalhado" que seja mais detalhado, o que devo fazer?
 
+  - Caso eu queira adicionar um menu interativo com as opções "Escaneamento rápido" que escaneie rapidamente e "Escaneamento detalhado" que seja mais detalhado, o que devo fazer?
 - Resultado:
 
-    ```python
-    def main():
-        while True:
-            # Display the menu
-            print("\n=== Menu de Escaneamento ===")
-            print("1. Escaneamento rápido")
-            print("2. Escaneamento detalhado")
-            print("3. Sair")
-            
-            # Get the user's choice
-            choice = input("Escolha uma opção: ").strip()
-            
-            if choice == "1":
-                print("\n[+] Você escolheu: Escaneamento rápido")
-                quick_scan()
-            elif choice == "2":
-                print("\n[+] Você escolheu: Escaneamento detalhado")
-                detailed_scan()
-            elif choice == "3":
-                print("\n[+] Saindo do programa. Até logo!")
-                break
-            else:
-                print("\n[!] Opção inválida. Tente novamente.")
+  ```python
+  def main():
+      while True:
+          # Display the menu
+          print("\n=== Menu de Escaneamento ===")
+          print("1. Escaneamento rápido")
+          print("2. Escaneamento detalhado")
+          print("3. Sair")
 
-    def quick_scan():
-        # Perform a quick scan
-        target = input("\nDigite o endereço IP para escanear (rápido): ").strip()
-        if not validate_ip(target):
-            return
-        open_ports = scan_ports_with_socket(target)
-        print(f"Portas abertas detectadas (rápido): {open_ports}")
+          # Get the user's choice
+          choice = input("Escolha uma opção: ").strip()
 
-    def detailed_scan():
-        # Perform a detailed scan
-        target = input("\nDigite o endereço IP para escanear (detalhado): ").strip()
-        if not validate_ip(target):
-            return
-        open_ports = scan_ports_with_socket(target)
-        print(f"Portas abertas detectadas (detalhado): {open_ports}")
-        if open_ports:
-            results = scan_services_with_nmap(target, open_ports)
-            print(f"Serviços identificados (detalhado): {results}")
-            save_results_to_json("scan_results_detailed.json", results)
-        else:
-            print("Nenhuma porta aberta encontrada para escanear serviços.")
+          if choice == "1":
+              print("\n[+] Você escolheu: Escaneamento rápido")
+              quick_scan()
+          elif choice == "2":
+              print("\n[+] Você escolheu: Escaneamento detalhado")
+              detailed_scan()
+          elif choice == "3":
+              print("\n[+] Saindo do programa. Até logo!")
+              break
+          else:
+              print("\n[!] Opção inválida. Tente novamente.")
 
-    def validate_ip(target):
-        # Validate the IP address
-        try:
-            ipaddress.ip_address(target)
-            print(f"Alvo recebido: {target}")
-            return True
-        except ValueError:
-            print("Erro: O endereço fornecido não é um IP válido.")
-            return False
-        ```
+  def quick_scan():
+      # Perform a quick scan
+      target = input("\nDigite o endereço IP para escanear (rápido): ").strip()
+      if not validate_ip(target):
+          return
+      open_ports = scan_ports_with_socket(target)
+      print(f"Portas abertas detectadas (rápido): {open_ports}")
 
-    - Ela solicitou que ao selecionar o escaneamento rápido ele também salve no arquivo json o resultado.
+  def detailed_scan():
+      # Perform a detailed scan
+      target = input("\nDigite o endereço IP para escanear (detalhado): ").strip()
+      if not validate_ip(target):
+          return
+      open_ports = scan_ports_with_socket(target)
+      print(f"Portas abertas detectadas (detalhado): {open_ports}")
+      if open_ports:
+          results = scan_services_with_nmap(target, open_ports)
+          print(f"Serviços identificados (detalhado): {results}")
+          save_results_to_json("scan_results_detailed.json", results)
+      else:
+          print("Nenhuma porta aberta encontrada para escanear serviços.")
+
+  def validate_ip(target):
+      # Validate the IP address
+      try:
+          ipaddress.ip_address(target)
+          print(f"Alvo recebido: {target}")
+          return True
+      except ValueError:
+          print("Erro: O endereço fornecido não é um IP válido.")
+          return False
+
+    ```
+
+  - Ela solicitou que ao selecionar o escaneamento rápido ele também salve no arquivo json o resultado.
 
 ### Código Final
 
@@ -691,15 +691,15 @@ if _name_ == "_main_":
             arguments = f'-sV --version-intensity 9 -p {ports_to_scan}'
             if is_ipv6:
                 arguments += ' -6'  # Add the IPv6 flag if the target is IPv6
-            
+          
             # Use the open ports for the Nmap scan
             print(f"Comando Nmap: {arguments}")
             nm.scan(hosts=target, arguments=arguments)
-            
+          
             # Debug: Print raw Nmap scan info
             print(f"Nmap scan info: {nm.scaninfo()}")
             print(f"Nmap all hosts: {nm.all_hosts()}")
-            
+          
             for host in nm.all_hosts():
                 print(f"Host: {host}")
                 for proto in nm[host].all_protocols():
@@ -735,7 +735,7 @@ if _name_ == "_main_":
 
             # Get the user's choice
             choice = input("Escolha uma opção: ").strip()
-            
+          
             if choice == "1":
                 print("\n[+] Você escolheu: Escaneamento rápido")
                 quick_scan()
@@ -789,6 +789,4 @@ if _name_ == "_main_":
 
     if _name_ == "_main_":
         main()
-
-
-    ```
+```
