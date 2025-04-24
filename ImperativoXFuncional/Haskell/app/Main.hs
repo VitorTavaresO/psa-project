@@ -1,4 +1,12 @@
-module Main where
+x :: Integer
+x = 2
+
+doubleIt :: Integer
+doubleIt = x * 2
+
+doubleItAgain :: Integer
+doubleItAgain = doubleItAgain * 2
 
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = do
+  putStrLn "Hello, Haskell!"
