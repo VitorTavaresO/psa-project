@@ -1,17 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "operations.h"
 
-int numbers[MAX_SIZE];
-int filtered[MAX_SIZE];
-long long squared[MAX_SIZE];
+uint32_t *numbers = NULL;
+uint32_t *filtered = NULL;
+uint64_t *squared = NULL;
 
-void filterEvenNumbers(int *input, int inputSize, int *output, int *outputSize)
+int initializeArrays(void)
+{
+    numbers = (uint32_t *)malloc(MAX_SIZE * sizeof(uint32_t));
+    filtered = (uint32_t *)malloc(MAX_SIZE * sizeof(uint32_t));
+    squared = (uint64_t *)malloc(MAX_SIZE * sizeof(uint64_t));
+
+    if (numbers == NULL || filtered == NULL || squared == NULL)
+    {
+        printf("Error: Memory allocation failed\n");
+        freeArrays();
+        return 0;
+    }
+    return 1;
+}
+
+void freeArrays(void)
+{
+    if (numbers)
+        free(numbers);
+    if (filtered)
+        free(filtered);
+    if (squared)
+        free(squared);
+
+    numbers = NULL;
+    filtered = NULL;
+    squared = NULL;
+}
+
+void filterEvenNumbers(uint32_t *input, uint32_t inputSize, uint32_t *output, uint32_t *outputSize)
 {
     *outputSize = 0;
 
-    for (int i = 0; i < inputSize; i++)
+    for (uint32_t i = 0; i < inputSize; i++)
     {
         if (input[i] % 2 == 0)
         {
@@ -21,24 +51,24 @@ void filterEvenNumbers(int *input, int inputSize, int *output, int *outputSize)
     }
 }
 
-void squareNumbers(int *input, int inputSize, long long *output)
+void squareNumbers(uint32_t *input, uint32_t inputSize, uint64_t *output)
 {
-    for (int i = 0; i < inputSize; i++)
+    for (uint32_t i = 0; i < inputSize; i++)
     {
-        long long val = (long long)input[i];
+        uint64_t val = (uint64_t)input[i];
         output[i] = val * val;
     }
 }
 
-double calculateAverage(long long *input, int inputSize)
+double calculateAverage(uint64_t *input, uint32_t inputSize)
 {
     if (inputSize == 0)
     {
         return 0.0;
     }
 
-    long long sum = 0;
-    for (int i = 0; i < inputSize; i++)
+    uint64_t sum = 0;
+    for (uint32_t i = 0; i < inputSize; i++)
     {
         sum += input[i];
     }
@@ -46,17 +76,17 @@ double calculateAverage(long long *input, int inputSize)
     return (double)sum / inputSize;
 }
 
-void processData(int *input, int inputSize)
+void processData(uint32_t *input, uint32_t inputSize)
 {
     if (inputSize > MAX_SIZE)
     {
-        printf("Error: Input size exceeds maximum allowed size (%d)\n", MAX_SIZE);
+        printf("Error: Input size exceeds maximum allowed size (%u)\n", MAX_SIZE);
         return;
     }
 
     clock_t start = clock();
 
-    int filteredSize = 0;
+    uint32_t filteredSize = 0;
     filterEvenNumbers(input, inputSize, filtered, &filteredSize);
 
     squareNumbers(filtered, filteredSize, squared);
@@ -66,8 +96,8 @@ void processData(int *input, int inputSize)
     clock_t end = clock();
     double executionTime = ((double)(end - start)) / CLOCKS_PER_SEC;
 
-    printf("Array size: %d\n", inputSize);
-    printf("Number of even values: %d\n", filteredSize);
+    printf("Array size: %u\n", inputSize);
+    printf("Number of even values: %u\n", filteredSize);
 
     if (inputSize <= 20)
     {
@@ -103,19 +133,25 @@ int readNumbersFromFile(const char *filename)
     if (file == NULL)
     {
         printf("Error: Could not open file %s\n", filename);
-        exit(1);
+        return -1;
     }
 
-    int count = 0;
+    uint32_t count = 0;
 
-    while (count < MAX_SIZE && fscanf(file, "%d", &numbers[count]) == 1)
+    if (!initializeArrays())
+    {
+        fclose(file);
+        return -1;
+    }
+
+    while (count < MAX_SIZE && fscanf(file, "%u", &numbers[count]) == 1)
     {
         count++;
     }
 
     if (!feof(file))
     {
-        printf("Warning: Not all numbers were read. Maximum size reached (%d)\n", MAX_SIZE);
+        printf("Warning: Not all numbers were read. Maximum size reached (%u)\n", MAX_SIZE);
     }
 
     fclose(file);
@@ -124,16 +160,30 @@ int readNumbersFromFile(const char *filename)
 
 int main(int argc, char *argv[])
 {
+    clock_t total_start = clock();
+
     if (argc != 2)
     {
         printf("Usage: %s <input_file>\n", argv[0]);
         return 1;
     }
 
+    printf("--- Starting file reading and processing ---\n");
+
     int size = readNumbersFromFile(argv[1]);
+    if (size < 0)
+    {
+        return 1;
+    }
 
     printf("--- Processing Array (%d elements) ---\n", size);
     processData(numbers, size);
+
+    freeArrays();
+
+    clock_t total_end = clock();
+    double total_time = ((double)(total_end - total_start)) / CLOCKS_PER_SEC;
+    printf("\nTotal execution time (including file reading): %.6f seconds\n", total_time);
 
     return 0;
 }

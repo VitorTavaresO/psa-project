@@ -1,16 +1,21 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
 
-#define MAX_SIZE 1000000
+#include <stdint.h>
 
-extern int numbers[MAX_SIZE];
-extern int filtered[MAX_SIZE];
-extern long long squared[MAX_SIZE];
+#define MAX_SIZE 750000000
 
-void filterEvenNumbers(int *input, int inputSize, int *output, int *outputSize);
-void squareNumbers(int *input, int inputSize, long long *output);
-double calculateAverage(long long *input, int inputSize);
-void processData(int *input, int inputSize);
+extern uint32_t *numbers;
+extern uint32_t *filtered;
+extern uint64_t *squared;
+
+int initializeArrays(void);
+void freeArrays(void);
+
+void filterEvenNumbers(uint32_t *input, uint32_t inputSize, uint32_t *output, uint32_t *outputSize);
+void squareNumbers(uint32_t *input, uint32_t inputSize, uint64_t *output);
+double calculateAverage(uint64_t *input, uint32_t inputSize);
+void processData(uint32_t *input, uint32_t inputSize);
 int readNumbersFromFile(const char *filename);
 
 #endif
