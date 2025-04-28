@@ -1,61 +1,77 @@
-# Comparando Programação Imperativa e Funcional
 
-## Proposta do Projeto
+# O Paradigma Funcional no Desenvolvimento de Software
 
-O objetivo deste projeto é comparar os paradigmas de programação imperativo e funcional, destacando suas características, vantagens e desvantagens, por meio da implementação de uma tarefa simples em ambos os estilos.
+## Introdução
 
-## Objetivo Geral
+O paradigma funcional é um dos estilos mais antigos e, ao mesmo tempo, modernos de programação, com raízes em fundamentos matemáticos da década de 1930, ele trata o ato de programar como a construção de funções puras e composição de comportamentos.
 
-Analisar as diferenças entre os paradigmas de programação imperativo e funcional, avaliando qual estilo é mais adequado em termos de concisão, legibilidade, manutenção, escalabilidade e desempenho para resolver problemas específicos.
+Nos últimos anos, com o crescimento de aplicações distribuídas, programação paralela e a busca por códigos mais robustos e fáceis de testar, o paradigma funcional voltou ao centro das atenções, hoje, linguagens como Haskell, Erlang, Elixir, Scala, F#, e até abordagens em linguagens populares como JavaScript e Python, adotam princípios funcionais.
 
-## Objetivos Específicos
+Este trabalho explora o que é o paradigma funcional, suas principais características, vantagens em comparação ao paradigma imperativo e como ele é utilizado nas aplicações modernas. Também será montado um material de estudo completo e simplificado sobre suas regras, conceitos de pureza, imutabilidade, funções de ordem superior e implementação prática.
 
-* Implementar uma tarefa utilizando os paradigmas imperativo e funcional.
-* Comparar os códigos gerados em termos de clareza, concisão e facilidade de entendimento.
-* Avaliar os impactos de cada paradigma na manutenção e escalabilidade do código.
-* Avaliar os impactos de desempenho de cada um desses paradigmas.
-* Apresentar uma análise crítica sobre os benefícios e limitações de cada abordagem.
+Além disso o paradigma funcional oferece abordagens que promovem alta coesão, baixo acoplamento, previsibilidade e facilidade de manutenção, conceitos esses, fundamentais para a construção de software de alta qualidade, a compreensão dessas práticas permite projetar sistemas mais seguros, escaláveis e alinhados aos requisitos de robustez exigidos em ambientes profissionais complexos.
+
+## Objetivos
+
+### Objetivo Geral
+
+Analisar o paradigma funcional no desenvolvimento de software, seus conceitos principais, suas vantagens em comparação ao paradigma imperativo e apresentar de forma didática as bases para quem deseja entender e implementar programação funcional.
+
+### Objetivos Específicos
+
+* Explicar de forma simples e clara o que é o paradigma funcional.
+* Identificar as diferenças fundamentais entre o paradigma funcional e o imperativo.
+* Apresentar exemplos de uso real de programação funcional no mercado atual.
+* Fornecer um material de estudo bem didático sobre regras, princípios e formas de implementar o paradigma funcional puro e não-puro.
+
+## Ferramentas e Linguagens de Estudo
+
+* **Linguagens:** Haskell e Elixir
+* **Recursos:** Livros, artigos, documentações oficiais e exemplos práticos de código.
 
 ## Desenvolvimento
 
-## Descrição da Tarefa
+Desenvolver um material que explique a programação funcional de maneira estruturada, seguindo as seguintes tarefas:
 
-A tarefa consiste em realizar uma sequência de operações sobre uma lista de números inteiros. As operações são:
+### Tarefas
 
-1. **Filtragem** : Selecionar apenas os números pares da lista.
-2. **Transformação** : Elevar ao quadrado cada um dos números filtrados.
-3. **Agregação** : Calcular a média dos números transformados.
+* Definir o que é programação funcional e suas origens.
+* Apresentar as regras básicas do paradigma funcional.
+* Mostrar diferenças práticas entre programação imperativa e funcional.
+* Introduzir o conceito de pureza, imutabilidade, funções de ordem superior, recursão e composição.
+* Explicar o que é funcional pura e funcional não-pura.
+* Mostrar exemplos práticos e didáticos de código.
+* Listar linguagens que suportam o paradigma funcional (nativamente ou parcialmente).
+* Apontar onde o paradigma funcional é mais utilizado hoje.
 
-### Justificativa da Escolha
+## Cronograma das Atividades
 
-Esta tarefa foi escolhida por  **não favorecer explicitamente nenhum dos paradigmas** , permitindo uma comparação equilibrada:
+* **1° Dia** :
+  * Definição do tema do projeto.
+  * Levantamento das principais linguagens e características.
+  * Definição das tarefas a serem elaboradas.
+* **2° Dia** :
+  * Redação do material de estudo didático sobre regras do paradigma funcional.
+  * Criação de exemplos práticos comentados (códigos simples e explicativos).
+  * Separação de exemplos de uso moderno em aplicações reais.
+* **3° Dia** :
+  * Finalização do material, revisão e ajustes.
+  * Preparação de um guia rápido com principais conceitos e exemplos de uso.
 
-* **Paradigma Imperativo** :
-  * Utiliza estruturas como laços (`for`, `while`) e variáveis intermediárias para armazenar o estado.
-  * Favorece um estilo mais detalhado e explícito de controle do fluxo da lógica.
-* **Paradigma Funcional** :
-  * Utiliza funções como `filter`, `map` e `reduce` para compor as operações.
-  * Favorece a composição de funções, imutabilidade e concisão.
+## Materiais de Estudo
 
-### Cronograma
+1. Artigos e Livros:
+   1. "Learn You a Haskell for Great Good!" — Miran Lipovača (Livro gratuito e online)
+      **LINK: [http://learnyouahaskell.com/](http://learnyouahaskell.com/)**
+   2. "Programming Elixir ≥ 1.6" — Dave Thomas (livro referência sobre funcional no Elixir)
+   3. "Structure and Interpretation of Computer Programs" — Harold Abelson e Gerald Jay Sussman (introdução à programação funcional com Scheme)
+2. Documentações:
+   1. Documentação oficial do Haskell:
 
-1. **Dia 1:**
-   * Definição do problema e requisitos.
-   * Planejamento da estrutura do projeto e definição das métricas.
-   * Configuração inicial do ambiente de desenvolvimento.
-2. **Dia 2:**
-   * Escrita da tarefa em paradigma imperativo.
-   * Escrita da tarefa em paradigma funcional.
-3. **Dia 3:**
-   * Organização dos resultados das diferenças de desempenho dos paradigmas.
-   * Análise detalhada das diferenças entre os paradigmas.
-   * Documentação e conclusão do projeto.
+      **LINK: [https://www.haskell.org/documentation/]()**
+   2. Documentação oficial do Elixir:
 
-### Métricas de Avaliação
+      **LINK: [https://elixir-lang.org/docs.html]()**
+   3. Guia de programação funcional em JavaScript:
 
-Durante a análise, serão considerados os seguintes critérios:
-
-* **Legibilidade** : Clareza do código e facilidade de leitura por humanos.
-* **Concisão** : Quantidade de código necessária para expressar a lógica.
-* **Manutenção** : Facilidade para modificar e adaptar o código no futuro.
-* **Desempenho** : Tempo de execução e uso de memória em diferentes tamanhos de entrada (ex: 10, 10.000 e 1.000.000 elementos).
+      **LINK: [https://eloquentjavascript.net/1st_edition/chapter6.html]()**
