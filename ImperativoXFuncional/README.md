@@ -1,4 +1,3 @@
-
 # O Paradigma Funcional no Desenvolvimento de Software
 
 ## Introdução
@@ -59,19 +58,3 @@ Desenvolver um material que explique a programação funcional de maneira estrut
   * Preparação de um guia rápido com principais conceitos e exemplos de uso.
 
 ## Materiais de Estudo
-
-1. Artigos e Livros:
-   1. "Learn You a Haskell for Great Good!" — Miran Lipovača (Livro gratuito e online)
-      **LINK: [http://learnyouahaskell.com/](http://learnyouahaskell.com/)**
-   2. "Programming Elixir ≥ 1.6" — Dave Thomas (livro referência sobre funcional no Elixir)
-   3. "Structure and Interpretation of Computer Programs" — Harold Abelson e Gerald Jay Sussman (introdução à programação funcional com Scheme)
-2. Documentações:
-   1. Documentação oficial do Haskell:
-
-      **LINK: [https://www.haskell.org/documentation/]()**
-   2. Documentação oficial do Elixir:
-
-      **LINK: [https://elixir-lang.org/docs.html]()**
-   3. Guia de programação funcional em JavaScript:
-
-      **LINK: [https://eloquentjavascript.net/1st_edition/chapter6.html]()**
