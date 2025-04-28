@@ -58,3 +58,16 @@ Desenvolver um material que explique a programação funcional de maneira estrut
   * Preparação de um guia rápido com principais conceitos e exemplos de uso.
 
 ## Materiais de Estudo
+
+1. Artigos e Livros:
+
+   1. Gentle Introduction to Haskell
+      **LINK: [https://dl.acm.org/doi/pdf/10.1145/130697.130698]()**
+   2. Introduction to Functional Programming
+      **LINK: [https://usi-pl.github.io/doc/Bird_Wadler.%20Introduction%20to%20Functional%20Programming.1ed.pdf]()**
+2. Documentações:
+
+   1. Documentação oficial do Haskell:
+      **LINK: [https://www.haskell.org/documentation/]()**
+   2. Documentação oficial do Elixir:
+      **LINK: [https://elixir-lang.org/docs.html]()**
