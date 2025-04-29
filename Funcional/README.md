@@ -36,8 +36,8 @@ Desenvolver um material que explique a programação funcional de maneira estrut
 
 * Definir o que é programação funcional e suas origens.
 * Apresentar as regras básicas do paradigma funcional.
-* Mostrar diferenças práticas entre programação imperativa e funcional.
 * Introduzir o conceito de pureza, imutabilidade, funções de ordem superior, recursão e composição.
+* Mostrar diferenças práticas entre programação imperativa e funcional.
 * Explicar o que é funcional pura e funcional não-pura.
 * Mostrar exemplos práticos e didáticos de código.
 * Listar linguagens que suportam o paradigma funcional (nativamente ou parcialmente).
