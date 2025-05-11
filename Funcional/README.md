@@ -59,15 +59,51 @@ Desenvolver um material que explique a programação funcional de maneira estrut
 
 ## Materiais de Estudo
 
-1. Artigos e Livros:
+### **Artigos e Livros:**
 
-   1. Gentle Introduction to Haskell
-      **LINK: [https://dl.acm.org/doi/pdf/10.1145/130697.130698]()**
-   2. Introduction to Functional Programming
-      **LINK: [https://usi-pl.github.io/doc/Bird_Wadler.%20Introduction%20to%20Functional%20Programming.1ed.pdf]()**
-2. Documentações:
+1. **Programação Funcional: teoria e conceitos**
 
-   1. Documentação oficial do Haskell:
-      **LINK: [https://www.haskell.org/documentation/]()**
-   2. Documentação oficial do Elixir:
-      **LINK: [https://elixir-lang.org/docs.html]()**
+   Autor: Marcelo Martins
+
+   **LINK: [https://medium.com/@marcelomg21/programa%C3%A7%C3%A3o-funcional-teoria-e-conceitos-975375cfb010](https://medium.com/@marcelomg21/programa%C3%A7%C3%A3o-funcional-teoria-e-conceitos-975375cfb010)**
+2. **O que é programação funcional e como usamos esta tecnologia no Nubank**
+
+   Autor: Nubank
+
+   **LINK: [https://building.nubank.com/pt-br/o-que-e-programacao-funcional-e-como-usamos-esta-tecnologia-no-nubank/](https://building.nubank.com/pt-br/o-que-e-programacao-funcional-e-como-usamos-esta-tecnologia-no-nubank/)**
+3. **Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I**
+
+   Autor: John McCarthy
+
+   **LINK: [https://dl.acm.org/doi/pdf/10.1145/367177.367199]()**
+
+   Publicado em: Communications of the ACM, Volume 3, Número 4, 1960
+4. **Gentle Introduction to Haskell**
+
+   Autores: Paul Hudak, Simon Peyton Jones, Philip Wadler
+
+   **LINK: [https://dl.acm.org/doi/pdf/10.1145/130697.130698](https://dl.acm.org/doi/pdf/10.1145/130697.130698)**
+
+   Publicado em: ACM SIGPLAN Notices, Volume 27, Número 5, 1992
+
+### **Documentações:**
+
+1. **Documentação oficial do Haskell**
+
+   **LINK: [https://www.haskell.org/documentation/](https://www.haskell.org/documentation/)**
+2. **Documentação oficial do Elixir**
+
+   **LINK: [https://elixir-lang.org/docs.html](https://elixir-lang.org/docs.html)**
+
+### **Outros Links Relevantes:**
+
+1. **Introduction to Functional Programming**
+
+   Autor: Bird & Wadler
+
+   **LINK: [https://usi-pl.github.io/doc/Bird_Wadler.%20Introduction%20to%20Functional%20Programming.1ed.pdf](https://usi-pl.github.io/doc/Bird_Wadler.%20Introduction%20to%20Functional%20Programming.1ed.pdf)**
+2. **Inside the Cult of the Haskell Programmer**
+
+   Autor: Wired
+
+   **LINK: [https://www.wired.com/story/inside-the-cult-of-the-haskell-programmer/](https://www.wired.com/story/inside-the-cult-of-the-haskell-programmer/)**
