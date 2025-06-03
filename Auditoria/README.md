@@ -34,7 +34,7 @@ Analisar a qualidade de aplicações Android, com foco nos atributos de desempen
 | Papel    | Responsáveis | Atividades principais                                                                                                    |
 | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Pesquisa | 3 pessoas     | Fundamentação teórica, levantamento de ferramentas, problemas comuns, escrita das seções teóricas e metodológicas |
-| Prática | 2 pessoas     | Auditoria com MobSF, Profiler, Firebase e Lint, testes em app open source, documentação dos resultados                 |
+| Prática | 2 pessoas     | Auditoria com testes em app open source, documentação dos resultados                                                  |
 
 ### Etapas do Projeto
 
