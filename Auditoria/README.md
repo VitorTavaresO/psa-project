@@ -101,8 +101,8 @@ Serão apresentados os principais problemas encontrados nas análises estática 
 | Semana | Atividades de Pesquisa                           | Atividades Práticas                           |
 | ------ | ------------------------------------------------ | ---------------------------------------------- |
 | 1      | Levantamento teórico e ferramentas              | Escolha do app e configuração do ambiente    |
-| 2      | Escrita da fundamentação teórica              | Análise Estática (MobSF + Lint)              |
-| 3      | Revisão teórica e aprofundamento metodológico | Análise Dinâmica (Profiler ou Firebase)      |
+| 2      | Escrita da fundamentação teórica              | Análise Estática                             |
+| 3      | Revisão teórica e aprofundamento metodológico | Análise Dinâmica                             |
 | 4      | Conclusão do artigo e revisão final            | Consolidação dos resultados e documentação |
 
 ## Materiais de Estudo
