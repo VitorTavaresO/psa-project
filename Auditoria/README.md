@@ -1,140 +1,124 @@
-# Auditoria de Qualidade em Aplicações Android: Uma Abordagem Prática com Foco em Desempenho e Segurança
+# **Auditoria de Qualidade em Aplicações Android: Uma Abordagem Prática com Foco em Desempenho, Segurança e IA**
 
-## Introdução
+## **Introdução**
 
-Com o crescimento exponencial do uso de dispositivos móveis, a qualidade das aplicações Android tornou-se um fator crítico para a experiência do usuário e para o sucesso de um aplicativo, problemas como lentidão, consumo excessivo de recursos ou falhas de segurança podem comprometer seriamente a usabilidade e a confiabilidade de um app.
+O crescente uso de dispositivos móveis torna a qualidade das aplicações Android um fator crítico para a experiência do usuário e para a sustentabilidade dos sistemas. Problemas como lentidão, consumo excessivo de recursos e falhas de segurança impactam diretamente a usabilidade, a confiabilidade e a reputação de um app.
 
-Neste contexto, o presente trabalho propõe uma auditoria prática de qualidade em aplicações Android, com foco em dois atributos fundamentais definidos pela norma ISO/IEC 25010: desempenho e segurança. Utilizando ferramentas como MobSF, Android Profiler, Firebase Performance e Android Lint, este estudo busca identificar problemas reais em um aplicativo open source, analisando tanto aspectos estáticos quanto dinâmicos da aplicação.
+Este trabalho propõe uma  **auditoria prática de qualidade em aplicações Android** , com foco nos atributos definidos pela norma  **ISO/IEC 25010** , especialmente **desempenho** e  **segurança** .
 
-A iniciativa visa não apenas demonstrar a importância da análise de qualidade no ciclo de desenvolvimento de software mobile, mas também capacitar a equipe na utilização de ferramentas práticas de auditoria. Os resultados obtidos serão discutidos em termos de impacto nos atributos de qualidade e potencial de correção.
+Além do uso de ferramentas tradicionais de análise estática e dinâmica (MobSF, Android Lint, SonarQube, Android Profiler), o projeto também traz uma abordagem inovadora:  **a aplicação de ferramentas de Inteligência Artificial (IA), especificamente o** GitHub Copilot, na avaliação da qualidade do software.
 
-## Objetivos
+O objetivo é comparar os apontamentos gerados pelas ferramentas tradicionais com aqueles fornecidos por IA, discutindo a eficácia, as limitações e os ganhos de cada abordagem na prática da auditoria de software.
 
-### Objetivo Geral
+---
 
-Analisar a qualidade de aplicações Android, com foco nos atributos de desempenho e segurança, por meio de uma auditoria prática utilizando ferramentas de análise estática e dinâmica.
+## **Objetivos**
 
-### Objetivos Específicos
+### **Objetivo Geral**
 
-* Estudar os principais atributos de qualidade conforme a norma ISO/IEC 25010, com ênfase em desempenho e segurança.
-* Investigar as principais falhas de projeto em aplicações Android relacionadas a esses atributos.
-* Aplicar ferramentas como MobSF, Android Profiler e Android Lint em um app open source.
-* Documentar os resultados obtidos, classificando os problemas por severidade e propondo melhorias.
+Realizar uma auditoria de qualidade em aplicações Android, com foco em desempenho e segurança, comparando os resultados obtidos por ferramentas tradicionais de qualidade de software com análises realizadas por IA.
 
-## Ferramentas Utilizadas
+### **Objetivos Específicos**
 
-* **Estáticas:** MobSF, Android Lint e SonarQube
+* Estudar os atributos de qualidade da norma  **ISO/IEC 25010** , com ênfase em **Desempenho** e  **Segurança** .
+* Aplicar ferramentas de auditoria estática e dinâmica para levantamento de problemas.
+* Utilizar ferramentas de **Inteligência Artificial** para realizar análises complementares.
+* Elaborar dois relatórios por membro: um com os achados das ferramentas de qualidade de software e outro com os apontamentos da IA.
+* Comparar os resultados obtidos pelas duas abordagens.
+* Discutir os pontos fortes, limitações e complementaridade entre IA e ferramentas tradicionais.
+* Propor melhorias para o aplicativo analisado com base nos resultados.
+
+---
+
+## **Ferramentas Utilizadas**
+
+### **Ferramentas de Qualidade de Software:**
+
+* **Estáticas:** MobSF, Android Lint, SonarQube
 * **Dinâmicas:** Android Profiler
-* **Ambiente:**
 
-## Desenvolvimento
+### **Ferramentas de IA:**
 
-### Equipe e Tarefas
+* GitHub Copilot---
 
-| Papel    | Responsáveis | Atividades principais                                                                                                    |
-| -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Pesquisa | 3 pessoas     | Fundamentação teórica, levantamento de ferramentas, problemas comuns, escrita das seções teóricas e metodológicas |
-| Prática | 2 pessoas     | Auditoria com testes em app open source, documentação dos resultados                                                  |
+## **Desenvolvimento — Etapas do Projeto**
 
-### Etapas do Projeto
+### 1. **Escolha do App Open Source**
 
-1. **Escolha do App Open Source**
-   Critérios:
+* App não trivial, com código aberto e documentação suficiente.
+* Deve ser compilável no Android Studio e representar um cenário realista.
 
-   * App não trivial, com funcionalidades completas.
-   * Código aberto, compilável no Android Studio.
-   * Documentação mínima necessária.
-2. **Auditoria Estática**
+### 2. **Auditoria com Ferramentas de Qualidade de Software**
 
-   * Detectar falhas de segurança:
-     * Armazenamento inseguro *(Confidentiality)*
-     * Componentes exportados indevidamente *(Confidentiality, Resistance)*
-     * Permissões perigosas *(Confidentiality, Authenticity)*
-     * Falta de verificação de integridade de dados *(Integrity)*
-     * Falta de autenticação ou validação de origem *(Authenticity)*
-     * Ausência de proteção contra engenharia reversa *(Resistance)*
-     * Falta de logs de ações sensíveis *(Accountability, Non-repudiation)*
-   * Detectar problemas de desempenho:
-     * Más práticas de código *(Time Behaviour)*
-     * Vazamentos de memória *(Resource Utilization)*
-     * Uso excessivo de recursos *(Resource Utilization)*
-3. **Auditoria Dinâmica**
+* **Análise Estática:**
+  * Verificação de vulnerabilidades (armazenamento inseguro, permissões, componentes exportados, etc.).
+  * Identificação de problemas de desempenho (uso de memória, CPU, má práticas, vazamento de memória, etc.).
+* **Análise Dinâmica:**
+  * Monitoramento de CPU, memória, rede e tempo de resposta.
+  * Avaliação de comportamento sob carga e monitoramento de transmissão de dados sensíveis.
 
-   * Monitorar CPU, memória e rede *(Resource Utilization)*
-   * Medir tempo de resposta e execução *(Time Behaviour)*
-   * Avaliar comportamento sob carga *(Capacity)*
-   * Monitorar transmissão de dados sensíveis *(Confidentiality, Authenticity)*
-   * Detectar modificação ou violação em tempo de execução *(Resistance, Integrity)*
-4. **Documentação dos Resultados**
+### 3. **Auditoria com Inteligência Artificial**
 
-   * Tabelas de vulnerabilidades e problemas de desempenho
-   * Classificação por impacto (baixa, média, alta)
-   * Propostas de melhoria e relação com atributos da ISO/IEC 25010
+* Utilizar IA para realizar análises manuais ou semiautomáticas do código, perguntando sobre:
+  * Boas práticas de segurança e desempenho.
+  * Vulnerabilidades.
+  * Sugestões de melhoria de código.
+  * Problemas de arquitetura, organização, legibilidade ou consumo de recursos.
+* Registrar os apontamentos, evidências e recomendações feitas pela IA.
 
-## Fundamentação Teórica
+### 4. **Documentação dos Resultados**
 
-A pesquisa será dividida em três frentes principais, cada uma atribuída a um dos pesquisadores:
+* Cada membro gera:
+  * **Relatório da Ferramenta de Qualidade de Software.**
+  * **Relatório dos Apontamentos da IA.**
+* Consolidar os resultados:
+  * Quadro comparativo entre IA e ferramentas.
+  * Classificação dos problemas por impacto (baixa, média, alta) e tipo (desempenho, segurança, outros).
 
-### 1. Qualidade de Software com base na ISO/IEC 25010
+### 5. **Discussão e Propostas de Melhoria**
 
-Nesta trabalho de auditoria, o foco será nos atributos de qualidade **Desempenho (Performance Efficiency)** e **Segurança (Security)**, conforme definidos na ISO/IEC 25010.
+* Avaliar pontos fortes, limitações e complementaridade das abordagens.
+* Propor correções e melhorias para o projeto analisado.
 
-Para cada um dos subatributos listados abaixo, serão abordados três pontos:
+---
 
-1. **Contextualização do subatributo**
-2. **Problemas causados pela ausência de sua aplicação**
-3. **Formas de aplicá-lo na prática**
+## **Fundamentação Teórica**
 
-#### Desempenho (Performance Efficiency)
+Mantém-se os mesmos pilares, agora adicionando uma frente sobre IA:
 
-* **Time Behaviour**
-* **Resource Utilization**
-* **Capacity**
+### 1. **Qualidade de Software e ISO/IEC 25010**
 
-#### Segurança (Security)
+* Atributos: **Desempenho** e  **Segurança** .
+* Subatributos:
+  * *Performance Efficiency:* Time Behaviour, Resource Utilization, Capacity.
+  * *Security:* Confidentiality, Integrity, Authenticity, Non-repudiation, Accountability, Resistance.
 
-* **Confidentiality**
-* **Integrity**
-* **Authenticity**
-* **Non-repudiation**
-* **Accountability**
-* **Resistance**
+### 2. **Ferramentas de Qualidade de Software**
 
-### 3. Ferramentas e Técnicas
+* Análise das ferramentas tradicionais, suas vantagens e limitações.
 
-* Ferramentas de análise estática e dinâmica.
-* Comparação entre Android Lint, MobSF, SonarQube, Android Profiler.
-* Vantagens, limitações e contexto ideal de uso.
+### 3. **Uso de Inteligência Artificial na Análise de Código**
 
-## Resultados e Discussão
+* Potencial, limites, riscos e vantagens do uso de IA como apoio na auditoria de qualidade de software.
 
-Serão apresentados os principais problemas encontrados nas análises estática e dinâmica, seguidos por uma análise crítica de seus impactos:
+---
 
-* **Quadros e gráficos** mostrando vulnerabilidades e problemas de performance
-* **Classificação por severidade** e frequência
-* **Propostas de correção** alinhadas às boas práticas
-* **(Opcional)** Comparação antes/depois se correções forem aplicadas
+## **Resultados e Discussão**
 
-## Cronograma das Atividades
+* Apontamentos feitos pelas ferramentas tradicionais vs. IA.
+* Classificação dos problemas por tipo e severidade.
+* Análise crítica da eficácia de cada abordagem.
+* Propostas de melhorias no código e no processo de desenvolvimento.
 
-| Semana | Data  | Atividades de Pesquisa                                  | Atividades Práticas                                     |
-| ------ | ----- | ------------------------------------------------------- | -------------------------------------------------------- |
-| 1      | 09/06 | Levantamento teórico inicial                           | Escolha do app e configuração do ambiente              |
-| 2      | 16/06 | Estudo da ISO/IEC 25010 e definição dos atributos     | Instalação e testes preliminares com ferramentas       |
-| 3      | 23/06 | Escrita da fundamentação teórica                     | Início da Análise Estática com MobSF, Lint, SonarQube |
-| 4      | 30/06 | Continuação da escrita e organização da metodologia | Análise Estática — consolidação de achados          |
-| 5      | 28/07 | Revisão teórica e alinhamento com metodologia         | Início da Análise Dinâmica com Android Profiler       |
-| 6      | 04/08 | Consolidação das Fundamentações e Relevância       | Análise Dinâmica — coleta e registro de dados         |
-| 7      | 11/08 | Revisão geral do conteúdo escrito                     | Consolidação e comparação dos resultados             |
+---
 
-## Materiais de Estudo
+## *Cronograma Atualizado — Incluindo Análise com IA*
 
-1. **Documentação das Ferramentas:**
-   * Android Lint : [https://developer.android.com/studio/write/lint]()
-   * Android Profiler: [https://developer.android.com/studio/profile]()
-   * MobSF: [https://github.com/MobSF/Mobile-Security-Framework-MobSF]()
-   * SonarQube: [https://www.sonarsource.com/products/sonarqube/]()
-2. **Referências Normativas:**
-   * ISO/IEC 25010 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE)
-     * LINK: [https://www.iso.org/standard/35733.html]()
-3. **Artigos Científicos e Técnicos:**
+| Semana | Data          | **Atividades Práticas**                                                                 |
+| ------ | ------------- | ---------------------------------------------------------------------------------------------- |
+| 1      | 09/06         | Escolha do app e configuração do ambiente                                                    |
+| 2      | 16/06         | Instalação e testes preliminares com ferramentas                                             |
+| 3-4    | 21/06 e 28/06 | **Execução da Auditoria Completa com Ferramentas (Estática e Dinâmica)**             |
+| 5      | 28/07         | **Análise com IA — coleta de apontamentos e geração dos relatórios de cada membro** |
+| 6      | 04/08         | Ajustes finais nas propostas, consolidação dos relatórios e fechamento dos materiais        |
+| 7      | 18/08         | **Revisão geral, preparação dos vídeos e organização para apresentação final**   |
