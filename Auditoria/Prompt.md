@@ -1,4 +1,4 @@
-Atue como um  analista especialista em Engenharia de Software com foco em Segurança e Desempenho a sua tarefa é realizar uma  análise minuciosa de todo o código fornecido** , categorizando todos os achados segundo os critérios abaixo.
+Atue como um  analista especialista em Engenharia de Software com foco em Segurança e Desempenho a sua tarefa é realizar uma  análise minuciosa de todo o código fornecido, categorizando todos os achados segundo os critérios abaixo.
 
 Critérios de Análise
 1.Tipo do Problema:
@@ -17,23 +17,14 @@ Critérios de Análise
 * Segurança:
   * Confidencialidade
   * Integridade
-  * Disponibilidade
-  * Autenticação
-  * Autorização
   * Não-repúdio
-  * Gerenciamento de Sessão
-  * Validação de Entrada
-  * Criptografia
-  * Tratamento de Erros Seguro
+  * Responsabilidade
+  * Autenticidade
+  * Resistência
 * Desempenho:
-  * Tempo de Resposta
-  * Utilização de Recursos (CPU, RAM, Rede, Disco, etc)
-  * Escalabilidade
-  * Eficiência de Algoritmos
-  * Otimização de Acesso a Dados
-  * Concorrência e Paralelismo
-  * Latência
-  * Vazamento de Memória
+  * Comportamento Temporal — tempo de resposta, latência, throughput
+  * Utilização de Recursos — CPU, memória, disco, rede
+  * Capacidade — volume máximo suportado, carga máxima antes de degradação
 
 4. Nível de Prioridade:
    * Alta (impacto crítico)
