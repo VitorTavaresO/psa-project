@@ -1,3 +1,4 @@
+***DeepSeek***
 | Arquivo                          | Tipo do Problema          | Atributo     | Subatributo           | Prioridade | Descrição do Problema                                                                 | Recomendações                                                                 |
 |----------------------------------|--------------------------|--------------|-----------------------|------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | `completeUrl.ts`                 | **Hotspot de Segurança** | Segurança    | Resistência           | Alta       | Manipulação de URLs sem validação estrita.                                           | Implementar lista branca de domínios e validação rigorosa.                    |
