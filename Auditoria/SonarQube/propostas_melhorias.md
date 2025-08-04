@@ -1,4 +1,27 @@
-### 🐛 BUGS CRÍTICOS DO SONARQUBE
+### IMPLEMENTAR O PLUGIN DO SONARQUBE
+```typescript
+const scanner = require('sonarqube-scanner');
+
+scanner.scan(
+  {
+    serverUrl: "http://localhost:9000",
+    options: {
+      "sonar.login": "admin",
+      "sonar.password": "apuque14",
+      "sonar.projectName": "test",
+      "sonar.projectDescription": "Just for demo...",
+      "sonar.sourceEncoding": "UTF-8",
+      "sonar.sources": "./app",
+      "sonar.test.inclusions": "**/*.test.js,**/*.test.ts,**/*.test.tsx",
+      "sonar.tests": "./app,./e2e/tests",
+      "sonar.testExecutionReportPaths": "test-report.xml",
+      "sonar.javascript.lcov.reportPaths": "coverage/lcov.info"
+    },
+  },
+  () => process.exit()
+);
+```
+### BUGS CRÍTICOS DO SONARQUBE
 
 #### 4. Setters de Estado Inválidos
 
