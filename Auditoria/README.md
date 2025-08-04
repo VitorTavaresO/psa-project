@@ -103,12 +103,50 @@ Mantém-se os mesmos pilares, agora adicionando uma frente sobre IA:
 
 ---
 
+
 ## **Resultados e Discussão**
 
-* Apontamentos feitos pelas ferramentas tradicionais vs. IA.
-* Classificação dos problemas por tipo e severidade.
-* Análise crítica da eficácia de cada abordagem.
-* Propostas de melhorias no código e no processo de desenvolvimento.
+### **Entregas do Projeto**
+
+Os resultados desta auditoria serão organizados em quatro componentes principais:
+
+#### 1. **Relatório Geral das Ferramentas**
+
+* Consolidação dos achados de todas as ferramentas tradicionais utilizadas
+* Análise estática: MobSF, Android Lint, SonarQube
+* Análise dinâmica: Android Profiler
+* Classificação dos problemas por severidade e categoria
+* Métricas de qualidade e indicadores de desempenho
+
+#### 2. **Relatório da IA Copilot Claude Sonnet 4**
+
+* Análises e recomendações fornecidas pela IA
+* Apontamentos sobre segurança, desempenho e boas práticas
+* Sugestões de refatoração e otimização
+* Identificação de padrões arquiteturais e problemas estruturais
+* Avaliação de legibilidade e manutenibilidade do código
+
+#### 3. **Tabela Comparativa**
+
+* Comparação sistemática entre os achados das ferramentas tradicionais e da IA
+* Análise de convergências e divergências nos apontamentos
+* Avaliação da precisão e relevância de cada abordagem
+* Identificação de pontos fortes e limitações de cada método
+* Discussão sobre complementaridade das técnicas
+
+#### 4. **Conjunto de Propostas de Melhorias**
+
+* Recomendações priorizadas para correção dos problemas identificados
+* Plano de ação estruturado por impacto e esforço de implementação
+* Sugestões de melhorias arquiteturais e de código
+* Propostas para otimização de desempenho e fortalecimento da segurança
+* Diretrizes para prevenção de problemas futuros
+
+### **Análise Crítica**
+
+* Eficácia comparativa entre ferramentas tradicionais e IA na detecção de problemas
+* Discussão sobre a viabilidade prática de cada abordagem
+* Recomendações para integração de IA em processos de qualidade de software
 
 ---
 
@@ -121,4 +159,4 @@ Mantém-se os mesmos pilares, agora adicionando uma frente sobre IA:
 | 3-4    | 21/06 e 28/06 | **Execução da Auditoria Completa com Ferramentas (Estática e Dinâmica)**             |
 | 5      | 28/07         | **Análise com IA — coleta de apontamentos e geração dos relatórios de cada membro** |
 | 6      | 04/08         | Ajustes finais nas propostas, consolidação dos relatórios e fechamento dos materiais        |
-| 7      | 18/08         | **Revisão geral, preparação dos vídeos e organização para apresentação final**   |
+| 7      | 11/08         | **Revisão geral, preparação dos vídeos e organização para apresentação final**   |
