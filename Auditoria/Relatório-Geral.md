@@ -45,29 +45,29 @@
 
 ## Estatísticas da Análise
 
+### Principais Áreas de Preocupação
+
 ### Distribuição por Tipo de Problema
 
-* **BUG:** 22 ocorrências
-* **Code Smells:** 32 ocorrências
-* **Vulnerabilidade:** 8 ocorrências
-* **Sem cobertura de teste:** 15 ocorrências
+* **BUG:** 22 ocorrências (28%)
+* **Code Smells:** 32 ocorrências (41%)
+* **Vulnerabilidade:** 8 ocorrências (10%)
+* **Sem cobertura de teste:** 15 ocorrências (19%)
 
 ### Distribuição por Pilar Afetado
 
-* **Segurança:** 17 problemas
-* **Confiabilidade:** 15 problemas
-* **Desempenho:** 6 problemas
-* **Manutenabilidade:** 3 problemas
+* **Segurança:** 17 problemas (40%)
+* **Confiabilidade:** 15 problemas (36%)
+* **Desempenho:** 6 problemas (14%)
+* **Manutenabilidade:** 3 problemas (7%)
 
 ### Distribuição por Indicativo de Prioridade
 
-* **A (Crítico):** 5 problemas
-* **B (Alto):** 6 problemas
-* **C (Médio):** 16 problemas
-* **D (Baixo):** 1 problema
-* **E (Informativo):** 10 problemas
-
-### Principais Áreas de Preocupação
+* **A (Crítico):** 5 problemas (12%)
+* **B (Alto):** 6 problemas (14%)
+* **C (Médio):** 16 problemas (38%)
+* **D (Baixo):** 1 problema (2%)
+* **E (Informativo):** 10 problemas (24%)
 
 1. **Segurança de Dados:** Tokens e chaves em texto plano na memória
 2. **Compatibilidade Android:** Suporte a versões vulneráveis do Android
