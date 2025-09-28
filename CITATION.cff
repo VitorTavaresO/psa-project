@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Se você usar este repositório em sua pesquisa, por favor cite-o."
-title: "Os Riscos da Dependência Cega de IA para o Desenvolvimento de Software"
+title: "Dependência de Ferramentas de IA em Práticas de Computação: Relato sobre Lições de um Estudo aplicado em Sala de Aula"
 authors:
   - family-names: Noguti
     given-names: Aline
@@ -9,7 +9,7 @@ authors:
   - family-names: Tavares
     given-names: Vitor
     orcid: "https://orcid.org/0009-0001-1142-3266"
-version: "v1.0.2"
+version: "v1.0.0"
 date-released: 2025-09-28
 doi: "10.5281/zenodo.xxxxxxx"
 url: "https://github.com/VitorTavaresO/psa-project"
