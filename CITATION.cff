@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Se você usar este repositório em sua pesquisa, por favor cite-o."
+title: "Os Riscos da Dependência Cega de IA para o Desenvolvimento de Software"
+authors:
+  - family-names: Tavares
+    given-names: Vitor
+    orcid: "https://orcid.org/0009-0001-1142-3266"
+version: "v1.0.0"
+date-released: 2025-09-28
+doi: "10.5281/zenodo.xxxxxxx"
+url: "https://github.com/VitorTavaresO/psa-project"
+keywords:
+  - Inteligência Artificial
+  - Dependência de IA
+  - Estudo de Caso
+  - Python
