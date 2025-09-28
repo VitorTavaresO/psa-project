@@ -2,11 +2,11 @@ cff-version: 1.2.0
 message: "Se você usar este repositório em sua pesquisa, por favor cite-o."
 title: "Os Riscos da Dependência Cega de IA para o Desenvolvimento de Software"
 authors:
-  - family-names: Aline
-    given-names: Noguti
-- family-names: Albuquerque
+  - family-names: Noguti
+    given-names: Aline
+  - family-names: Albuquerque
     given-names: Eduardo
-- family-names: Tavares
+  - family-names: Tavares
     given-names: Vitor
     orcid: "https://orcid.org/0009-0001-1142-3266"
 version: "v1.0.0"
